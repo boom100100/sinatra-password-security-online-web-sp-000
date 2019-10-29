@@ -12,8 +12,9 @@ describe 'user' do
   it 'has a name' do
     user = User.new
     user.username = "Steven"
-    user.password_digest = "safepassword"
+    user.password = "safepassword"
     user.save
     expect(User.where(username: "Steven").first).to eq(user)
   end
 end
+
